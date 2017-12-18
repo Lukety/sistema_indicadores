@@ -1,2 +1,4 @@
-File for import data base modernización (MySQL) -> modernización.sql
+File to import database "modernización" (MySQL) -> modernización.sql
+
+- Tool used -> "phpmyadmin" for administration.
 
