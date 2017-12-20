@@ -11,13 +11,17 @@ Version 2
 
 ----- Version details ------
 
-1) - improved aesthetics:
+1) - Improved aesthetics:
 - New buttons.
 - New text boxs.
 - New drop-down lists.
 - New delete button in seccion "indicator details".
 
-2) - validation control of formulary:
+2) - Validation control of formulary:
+- Detection of repeated secretaries.
+- Detection of repeated directions.
+- Detection of repeated usuarios.
+- Detection of repeated indicators.
 
 
 
