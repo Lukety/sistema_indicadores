@@ -23,6 +23,7 @@ Version 2
 - Detection of repeated usuarios.
 - Detection of repeated indicators.
 
+3) - adaptation to differents screens resolutions.
 
 
 
