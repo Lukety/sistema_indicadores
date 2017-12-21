@@ -1,0 +1,37 @@
+header{
+
+	background: #007C30;
+	color:#fff;
+	box-shadow: 0 0 20px rgba(0,0,0,0.7);
+
+}
+
+
+#tabla_personalizada th{
+  width: 200px;
+  overflow: auto;
+}
+
+
+.fondo{
+	background: #BDBDBD;
+}
+
+.fondo2{
+	background: #F3F781;
+}
+
+.fondo3{
+	background: #F7F8E0;
+}
+
+.centro{
+	text-align: center;
+	line-height: 10px;
+}
+
+#limitar{
+	width: 300px;
+	height: 300px;
+	overflow: scroll;
+}
