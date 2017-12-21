@@ -2,6 +2,9 @@
 	$mysqli = new mysqli('localhost','root','root','modernizacion');
 	mysqli_query($mysqli,"SET NAMES 'utf8'");
 
+	$sql = "SELECT * FROM indicadores WHERE 1";
+	$contenido = $mysqli -> query($sql);
+	$repetidos = 0;
 
 	if (isset($_POST['Secretaria'])) {
     	$Secretaria = $_POST['Secretaria'];
@@ -241,10 +244,29 @@
 		$Dic_2017 = "0";
 	}
 
+	while($comparando = $contenido -> fetch_assoc()){
+		
+		if(strtolower($comparando['Nombre_proyecto']) == strtolower($Nombre_proyecto) && strtolower($comparando['Indicador']) == strtolower($Indicador) && strtolower($comparando['Direccion']) == strtolower($Direccion) && strtolower($comparando['Unidad_medida']) == strtolower($Unidad_medida) ){
+			$repetidos = 1;
+			break;
+		}else{
+			$repetidos = 0;	
+		}
+
+	}
+
+	if($repetidos == 0){
+
 	$sql = "INSERT INTO `indicadores`(`Secretaria`, `Direccion`, `Responsable`, `Eje_gestion`, `Prioridad`, `Nombre_proyecto`, `RIL`, `Indicador`, `Unidad_medida`, `Ene_2017`, `Feb_2017`, `Mar_2017`, `Abr_2017`, `May_2017`, `Jun_2017`, `Jul_2017`, `Ago_2017`, `Sep_2017`, `Oct_2017`, `Nov_2017`, `Dic_2017`) VALUES ('$Secretaria','$Direccion','$Responsable','$Eje_gestion','$Prioridad','$Nombre_proyecto','$RIL','$Indicador','$Unidad_medida','$Ene_2017','$Feb_2017','$Mar_2017','$Abr_2017','$May_2017','$Jun_2017','$Jul_2017','$Ago_2017','$Sep_2017','$Oct_2017','$Nov_2017','$Dic_2017')";
-	
+
 	mysqli_query($mysqli,$sql);
-	header("location: indicadores.php?cargar=si")
+	header("location: indicadores.php?cargar=si");
+	
+	}else{
+
+	header("location: carga.php?error=si");
+
+	}
 
 ?>
 	

@@ -57,7 +57,7 @@
 <br>
 <br>
 
-	<img src="img/icono_sesion">
+	<img src="img/icono_sesion.png">
 
 	<hr>
 

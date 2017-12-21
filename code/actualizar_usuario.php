@@ -207,7 +207,7 @@
 
     				<h5><b> Nuevo valor: </b></h5>
 
-    				<input type="text" class="form-control" name="texto_actualizar">
+    				<input type="text" class="form-control" name="texto_actualizar" required>
 					
     				<br>
 

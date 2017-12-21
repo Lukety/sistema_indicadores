@@ -105,10 +105,31 @@
 		<br>
 	
 			<div class = "row">
-			
+
+			<div class="container">
+
 			<center> <img class="img-responsive" src="img/icono_carga.png" align="center"> </center>
 
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+
+			<?php if(isset($_GET['error'])) { ?>
+				
+				<div class="alert alert-danger alert-dismissable">
+  				<button type="button" class="close" data-dismiss="alert">&times;</button>
+  				<b>Error:</b> El indicador <b><u>ya fue cargado</u></b> anteriormente.
+				</div>
+
+			<?php } ?>
+
 			<br>
+
+			</div>
+			<div class="col-md-3"></div>
+			</div>
+			</div>
+
+			<div class = "row">
 
 			<div class="col-xs-2 col-md-3"></div>
 			<div class="col-xs-4 col-md-3">
@@ -137,12 +158,12 @@
 
   				<div class="form-group">
     				<label for="Responsable"> Responsable: </label>
-    				<input type="text" class="form-control" id="Responsable" name="Responsable">
+    				<input type="text" class="form-control" id="Responsable" name="Responsable" required>
   				</div>		
 
   				<div class="form-group">
     				<label for="Eje_gestion"> Eje de gestión: </label>
-    				<input type="text" class="form-control" id="Eje_gestion" name="Eje_gestion">
+    				<input type="text" class="form-control" id="Eje_gestion" name="Eje_gestion" required>
   				</div>
 
   				<div class="form-group">
@@ -178,12 +199,12 @@
   			
   				<div class="form-group">
     				<label for="Nombre_proyecto"> Nombre del proyecto: </label>
-    				<input type="text" class="form-control" id="Nombre_proyecto" name="Nombre_proyecto">
+    				<input type="text" class="form-control" id="Nombre_proyecto" name="Nombre_proyecto" required>
   				</div>
 
   				<div class="form-group">
     				<label for="Indicador"> Indicador: </label>
-    				<input type="text" class="form-control" id="Indicador" name="Indicador">
+    				<input type="text" class="form-control" id="Indicador" name="Indicador" required>
   				</div>	
 
   				<div class="form-group">

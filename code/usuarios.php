@@ -134,6 +134,16 @@
 
 				<?php } ?>
 
+				<?php if(isset($_GET['vacio'])) { ?>
+			
+					<br>
+					<div class="alert alert-danger alert-dismissable">
+  					<button type="button" class="close" data-dismiss="alert">&times;</button>
+  					<b>Error:</b> Debe rellenar todos los campos del formulario.
+					</div>
+
+				<?php } ?>
+
 				<?php if(isset($_GET['eliminar'])) { ?>
 			
 					<br>
@@ -143,6 +153,18 @@
 					</div>
 
 				<?php } ?>
+
+				<?php if(isset($_GET['error'])) { ?>
+				
+				<div class="alert alert-danger alert-dismissable">
+  				<button type="button" class="close" data-dismiss="alert">&times;</button>
+  				<b>Error:</b> El usuario <b><u>ya fue cargado</u></b> anteriormente.
+				</div>
+
+				<?php } ?>
+
+
+
 
 
 					<div class="panel panel-default">
@@ -179,12 +201,12 @@
     
         					   		<div class="form-group">
 										<label for="Usuario"> Usuario: </label>
-										<input type="text" class="form-control" id="Usuario" name="Usuario">
+										<input type="text" id="Usuario" name="Usuario" class="form-control" required>
 									</div>
 									
 									<div class="form-group">
 										<label for="Nombre"> Nombre: </label>
-										<input type="text" class="form-control" id="Usuario" name="Nombre">
+										<input type="text" class="form-control" id="Usuario" name="Nombre" required>
 									</div>
 					
 									<div class="form-group">
@@ -215,7 +237,7 @@
 				
   									<div class="form-group">
 										<label for="Contrasena"> Contraseña: </label>
-										<input type="text" class="form-control" id="Contrasena" name="Contrasena">
+										<input type="text" class="form-control" id="Contrasena" name="Contrasena" required>
 									</div>
 
 									</div>
@@ -224,12 +246,12 @@
 
 									<div class="form-group">
 										<label for="Apellido"> Apellido: </label>
-										<input type="text" class="form-control" id="Apellido" name="Apellido">
+										<input type="text" class="form-control" id="Apellido" name="Apellido" required>
 									</div>
 
 									<div class="form-group">
 										<label for="DNI"> DNI: </label>
-										<input type="text" class="form-control" id="DNI" name="DNI">
+										<input type="text" class="form-control" id="DNI" name="DNI" required>
 									</div>
 
 									<div class="form-group">

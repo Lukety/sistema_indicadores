@@ -120,12 +120,32 @@
 
 				<?php } ?>
 
+				<?php if(isset($_GET['error_sec'])) { ?>
+			
+					<br>
+					<div class="alert alert-danger alert-dismissable">
+  					<button type="button" class="close" data-dismiss="alert">&times;</button>
+  					<b>Error:</b> La secretaría ya se encuentra cargada.
+					</div>
+
+				<?php } ?>
+
 				<?php if(isset($_GET['cargar_dir'])) { ?>
 			
 					<br>
 					<div class="alert alert-warning alert-dismissable">
   					<button type="button" class="close" data-dismiss="alert">&times;</button>
   					 La dirección fue <b><u>cargada</u></b> correctamente
+					</div>
+
+				<?php } ?>
+
+				<?php if(isset($_GET['error_dir'])) { ?>
+			
+					<br>
+					<div class="alert alert-danger alert-dismissable">
+  					<button type="button" class="close" data-dismiss="alert">&times;</button>
+  					 <b>Error:</b> La direccion ya se encuentra cargada.
 					</div>
 
 				<?php } ?>

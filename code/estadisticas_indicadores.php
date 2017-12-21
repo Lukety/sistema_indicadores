@@ -140,13 +140,22 @@
         
         <br>
 
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4 col-xs-3"></div>
+        <div class="col-md-4 col-xs-5">
+
         <center>
  
         <form action="bd_actualizacion_5.php" method="post">
 
-        <select name = "xproyecto" style="width:220px">
+        <select name = "xproyecto" class="form-control">
 
-             <option value ="vacio"> &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  --- Seleccionar ---  </option>
+             <option value ="vacio"> Seleccionar </option>
 
             <?php while($row_2 = $inter_2 -> fetch_assoc()){ ?>
 
@@ -160,13 +169,26 @@
 
         &nbsp &nbsp
 
-        <input type="submit" class="btn btn-default" name="Mostrar" value="Mostrar">
+
+        </div>
+
+        <div class="col-md-4 col-xs-3">
+
+                 <input type="submit" class="btn btn-default" name="Mostrar" value="Mostrar">
 
         </form>
 
         </center>
 
         <br>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
 
 
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>

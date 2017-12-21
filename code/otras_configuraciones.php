@@ -117,6 +117,19 @@
 
 		<?php } ?>
 
+		<?php if(isset($_GET['error'])) { ?>
+			
+			<br>
+			<div class="alert alert-danger alert-dismissable">
+  			<button type="button" class="close" data-dismiss="alert">&times;</button>
+  			<b>Error:</b> La unidad ya fue <b><u>cargada</u></b>. 
+  			</div>
+
+		<?php } ?>
+
+
+
+
 		<?php if(isset($_GET['eliminar'])) { ?>
 			
 			<br>
